@@ -29,6 +29,11 @@ addForm.addEventListener('submit', function(e){
   li.appendChild(deleteBtn);
   list.appendChild(li);
 
+  //clear all To-Do
+  clear.addEventListener('click', function(e) {
+      document.getElementById('todo-list').innerHTML = "";
+  })
+
 })
 
 //Delete todo
