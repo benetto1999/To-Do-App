@@ -34,6 +34,16 @@ addForm.addEventListener('submit', function(e){
       document.getElementById('todo-list').innerHTML = "";
   })
 
+  //Hide To-Do
+  hideBox.addEventListener('change', function(e) {
+    if (hideBox.checked) {
+      list.style.display = 'none';
+    }else {
+      list.style.display = 'initial';
+    }
+  });
+
+
 })
 
 //Delete todo
