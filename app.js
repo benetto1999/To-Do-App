@@ -1,18 +1,6 @@
 const btns = document.querySelectorAll('#todo-list .delete');
 const list = document.querySelector('#todo-list ul');
 const forms = document.forms;
-const hideBox = document.querySelector('#hide');
-const clear = document.querySelector('.clear');
-
-
-//Delete todo
-list.addEventListener('click', (e) => {
-  if(e.target.className == 'delete'){
-    const  li = e.target.parentElement;
-    li.parentNode.removeChild(li);
-  }
-})
-
 
 const addForm = document.forms['add-todo'];
 
@@ -39,19 +27,5 @@ addForm.addEventListener('submit', function(e){
   li.appendChild(bookName);
   li.appendChild(deleteBtn);
   list.appendChild(li);
-
-  //clear all To-Do
-  clear.addEventListener('click', function(e) {
-      document.getElementById('todo-list').innerHTML = "";
-  })
-
-  //Hide To-Do
-  hideBox.addEventListener('change', function(e) {
-    if (hideBox.checked) {
-      list.style.display = 'none';
-    }else {
-      list.style.display = 'initial';
-    }
-  });
 
 })
