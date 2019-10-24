@@ -2,6 +2,7 @@ const btns = document.querySelectorAll('#todo-list .delete');
 const list = document.querySelector('#todo-list ul');
 const forms = document.forms;
 
+
 const addForm = document.forms['add-todo'];
 
 //add todo
@@ -28,4 +29,12 @@ addForm.addEventListener('submit', function(e){
   li.appendChild(deleteBtn);
   list.appendChild(li);
 
+})
+
+//Delete todo
+list.addEventListener('click', (e) => {
+  if(e.target.className == 'delete'){
+    const  li = e.target.parentElement;
+    li.parentNode.removeChild(li);
+  }
 })
